@@ -5,11 +5,12 @@
     <div>
       <label for="post-title">Title</label>
       <input type="text" id="post-title" name="post-title" />
+      <button type="submit" class="btn">Create</button>
     </div>
     <div>
       <label for="post-text">Description</label>
       <textarea type="text" id="post-text" name="post-text"></textarea>
-      {{!-- <input type="text" id="post-text" name="post-text" /> --}}
+      {{! <input type="text" id="post-text" name="post-text" /> }}
     </div>
     <div>
       <h4>Select the type of skates you used</h4>
@@ -18,22 +19,37 @@
       <button type="submit" id="racing">Racing Skates</button>
       <button type="submit" id="touring">Touring Skates</button>
     </div>
-    <button type="submit" class="btn">Create</button>
   </form>
 </section>
 
 {{#if posts.length}}
-<section>
-  <h3>Your Posts</h3>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
+  <section>
+    <h3>Your Posts</h3>
+    <ol>
+      {{#each posts as |post|}}
+        <li>
+          {{!-- {{> post-info post}} --}}
+          <article class="post">
+            <div class="title">
+              <h3>{{title}}</h3>
+              <h5>(Posted by
+                {{user.username}}
+                on
+                {{format_date created_at}})</h5>
+            </div>
+            <div>
+              <p>{{post_text}}</p>
+            </div>
+            <div class="meta">
+              <a href="/post/{{id}}">{{comments.length}}
+                {{format_plural "comment" comments.length}}</a>
+              <a href="/dashboard/edit/{{post.id}}" class="edit-link"><button>Edit</button></a>
+            </div>
+          </article>
+        </li>
+      {{/each}}
+    </ol>
+  </section>
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
