@@ -1,17 +1,17 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment, Vote } = require('../models');
+const { Post, User, Comment} = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
     attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+        'id',
+        'title',
+        'post_text',
+        'user_id',
+        'created_at',
     ],
     include: [
       {
@@ -49,11 +49,11 @@ router.get('/post/:id', (req, res) => {
       id: req.params.id
     },
     attributes: [
-      'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+        'id',
+        'title',
+        'post_text',
+        'user_id',
+        'created_at',
     ],
     include: [
       {
@@ -90,12 +90,16 @@ router.get('/post/:id', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
+  if(req.session.loggedIn) {
+      res.redirect('/');
+      return; 
   }
-
   res.render('login');
+});
+
+// adapted code from https://github.com/nicolewallace09/the-tech-blog
+router.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 module.exports = router;
