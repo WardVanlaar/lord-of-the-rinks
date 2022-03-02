@@ -7,10 +7,10 @@
       <input type="text" id="post-title" name="post-title" />
       <div>
         <label id="skates_type">Select the type of skates you used</label>
-        <input type="checkbox" name="skate" value="figure">Figure Skates</input>
-        <input type="checkbox" name="skate" value="hockey">Hockey Skates</input>
-        <input type="checkbox" name="skate" value="racing">Racing Skates</input>
-        <input type="checkbox" name="skate" value="touring">Touring Skates</input>
+        <button id="figure" onclick="figureSkatesHandler()">Figure Skates</button>
+        <button id="hockey" onclick="hockeySkatesHandler()">Hockey Skates</button>
+        <button id="racing" onclick="racingSkatesHandler()">Racing Skates</button>
+        <button id="touring" onclick="touringSkatesHandler()">Touring Skates</button>
       </div>
 
     </div>
@@ -19,7 +19,7 @@
       <textarea type="text" id="post-text" name="post-text"></textarea>
       {{! <input type="text" id="post-text" name="post-text" /> }}
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button id="createPost" type="submit" class="btn">Create</button>
   </form>
 </section>
 
@@ -33,7 +33,7 @@
           <article class="post">
             <div class="title">
               <h3>{{title}}</h3>
-              {{!-- <p id="mySkates"></p> --}}
+              <p id="mySkates"></p>
               <h5>(Posted by
                 {{user.username}}
                 on
