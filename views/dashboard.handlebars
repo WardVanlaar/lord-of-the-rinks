@@ -7,10 +7,12 @@
       <input type="text" id="post-title" name="post-title" />
       <div>
         <label id="skates_type">Select the type of skates you used</label>
-        <button id="figure" class="skates" onclick="figureSkatesHandler()">Figure Skates</button>
-        <button id="hockey" onclick="hockeySkatesHandler()">Hockey Skates</button>
-        <button id="racing" onclick="racingSkatesHandler()">Racing Skates</button>
-        <button id="touring" onclick="touringSkatesHandler()">Touring Skates</button>
+        <input type="button" value="hello" id="hello"  class="skates">
+        
+        {{!-- <button id="figure" class="skates" onclick="selectedSkates('figure')">Figure Skates</button>
+        <button id="hockey" onclick="selectedSkates('hockey')">Hockey Skates</button>
+        <button id="racing" onclick="selectedSkates('racing')">Racing Skates</button>
+        <button id="touring" onclick="selectedSkates('touring')">Touring Skates</button> --}}
       </div>
 
     </div>
@@ -42,6 +44,9 @@
             <div>
               <p>{{post_text}}</p>
             </div>
+            <div>
+              <p>{{skates_type}}</p>
+            </div>
             <div class="meta">
                {{post.vote_count}} {{format_plural "point" post.vote_count}}
               <a href="/post/{{id}}">{{comments.length}}
@@ -57,3 +62,4 @@
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/select-skates.js"></script>

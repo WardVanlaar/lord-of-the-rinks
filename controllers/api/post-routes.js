@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connection");
-const { Post, User, Comment, Vote } = require("../../models");
+const { Post, User, Comment, Vote, Skates } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // get all posts
@@ -33,9 +33,16 @@ router.get("/", (req, res) => {
         model: User,
         attributes: ["username"],
       },
+      {
+        model: Skates,
+        attributes: ["id", "skates_type"],
+      },
     ],
   })
-    .then((dbPostData) => res.json(dbPostData))
+    .then((dbPostData) => {
+      console.log('dbPostData ', dbPostData)
+      res.json(dbPostData)
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -90,10 +97,11 @@ router.get("/:id", (req, res) => {
 
 router.post("/", withAuth, (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+  console.log(req.body)
   Post.create({
     title: req.body.title,
     post_text: req.body.post_text,
-    skates_type: req.body.skate_type,
+    skates_type: req.body.my_skates,
     user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))

@@ -14,3 +14,7 @@
 
 // function touringSkatesHandler() {
 //     document.getElementById('mySkates').innerHTML = "Touring skates"
+
+function selectedSkates (skate) {
+    alert(skate);
+}

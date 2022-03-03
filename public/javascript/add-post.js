@@ -32,7 +32,10 @@ async function newFormHandler(event) {
 
   const title = document.querySelector('input[name="post-title"]').value;
   const post_text = document.querySelector('textarea[name="post-text"]').value;
-  // let my_skates = skateArray.values();
+  const my_skates = document.getElementById('hello').value;
+  alert(title)
+  alert(post_text)
+  alert(my_skates)
   // console.log(my_skates);
 
   const response = await fetch(`/api/posts`, {
@@ -40,7 +43,7 @@ async function newFormHandler(event) {
     body: JSON.stringify({
       title,
       post_text,
-      // my_skates,
+      my_skates,
     }),
     headers: {
       "Content-Type": "application/json",
