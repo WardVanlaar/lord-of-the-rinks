@@ -10,11 +10,11 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
   
-  await seedSkates();
-  console.log('\n----- SKATES SEEDED -----\n');
-
   await seedUsers();
   console.log('\n----- USERS SEEDED -----\n');
+
+  await seedSkates();
+  console.log('\n----- SKATES SEEDED -----\n');
 
   await seedPosts();
   console.log('\n----- POSTS SEEDED -----\n');
