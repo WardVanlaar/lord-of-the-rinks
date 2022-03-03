@@ -217,3 +217,7 @@ div.meta {
   display: flex;
   justify-content: space-between;
 }
+
+#skates_type {
+  padding: 23px 0px 0px 0px;
+}

@@ -37,16 +37,7 @@ User.init(
       validate: {
         len: [4],
       },
-    },
-    skates_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      defaultValue: 1,
-      references: {
-        model: "skates",
-        key: "id",
-      },
-    },
+    }
   },
   {
     hooks: {
