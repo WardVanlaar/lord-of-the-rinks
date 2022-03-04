@@ -15,6 +15,10 @@
 // function touringSkatesHandler() {
 //     document.getElementById('mySkates').innerHTML = "Touring skates"
 
-function selectedSkates (skate) {
+function selectedSkates (event) {
+    event.preventDefault();
+
     alert(skate);
+    document.getElementById('my_skates').innerHTML = "Figure skates"
+    console.log("Figure skates")
 }

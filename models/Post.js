@@ -15,7 +15,7 @@ class Post extends Model {
           "id",
           "title",
           "post_text",
-          // "skates_type",
+          "skates_type",
           "created_at",
           [
             sequelize.literal(

@@ -27,6 +27,13 @@
 // }
 // var my_skates = ""
 
+
+// function selectedSkates (skate) {
+//   alert(skate);
+//   document.getElementById('mySkates').innerHTML = "Figure skates"
+
+// }
+
 async function newFormHandler(event) {
   event.preventDefault();
 
@@ -36,6 +43,7 @@ async function newFormHandler(event) {
   alert(title)
   alert(post_text)
   alert(my_skates)
+  console.log(my_skates)
  
 
   const response = await fetch(`/api/posts`, {
