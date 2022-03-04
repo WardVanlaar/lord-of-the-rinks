@@ -15,7 +15,7 @@ class Post extends Model {
           "id",
           "title",
           "post_text",
-          "skates_id",
+          // "skates_type",
           "created_at",
           [
             sequelize.literal(
@@ -48,13 +48,13 @@ Post.init(
         len: [1],
       },
     },
-    skates_id: {
-      type: DataTypes.INTEGER,
+    skates_type: {
+      type: DataTypes.STRING,
       allowNull: true,
-      references: {
-        model: "skates",
-        key: "id",
-      },
+      // references: {
+      //   model: "skates",
+      //   key: "id",
+      // },
     },
     user_id: {
       type: DataTypes.INTEGER,

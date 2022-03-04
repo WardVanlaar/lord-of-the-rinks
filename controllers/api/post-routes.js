@@ -13,11 +13,12 @@ router.get("/", (req, res) => {
       "post_text",
       "user_id",
       "created_at",
+      "my_skates",
       [
-        sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
-        ),
-        "vote_count",
+      sequelize.literal(
+        "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+      ),
+      "vote_count",
       ],
     ],
     include: [

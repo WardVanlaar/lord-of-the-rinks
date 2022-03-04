@@ -69,12 +69,12 @@ Post.hasMany(Comment, {
 });
 
 Skates.hasMany(Post, {
-  foreignKey: 'skates_id',
+  foreignKey: 'skates_type',
   onDelete: 'CASCADE'
 });
 
 Post.belongsTo(Skates, {
-  foreignKey: 'skates_id',
+  foreignKey: 'skates_type',
   onDelete: 'CASCADE'
 })
 

@@ -32,11 +32,11 @@ async function newFormHandler(event) {
 
   const title = document.querySelector('input[name="post-title"]').value;
   const post_text = document.querySelector('textarea[name="post-text"]').value;
-  const my_skates = document.getElementById('hello').value;
+  const my_skates = document.querySelector('input[name="skatesType"]').value;
   alert(title)
   alert(post_text)
   alert(my_skates)
-  // console.log(my_skates);
+ 
 
   const response = await fetch(`/api/posts`, {
     method: "POST",
