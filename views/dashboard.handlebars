@@ -35,7 +35,7 @@
           <article class="post">
             <div class="title">
               <h3>{{title}}</h3>
-              <p id="my_skates"></p>
+              {{!-- <p id="my_skates"></p> --}}
               <h5>(Posted by
                 {{user.username}}
                 on
@@ -45,7 +45,7 @@
               <p>{{post_text}}</p>
             </div>
             <div>
-              <p>{{skates_type}}</p>
+              <p id="my_skates"></p>
             </div>
             <div class="meta">
                {{post.vote_count}} {{format_plural "point" post.vote_count}}
