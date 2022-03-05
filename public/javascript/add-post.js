@@ -45,7 +45,6 @@ async function newFormHandler(event) {
   alert(my_skates)
   console.log(my_skates)
  
-
   const response = await fetch(`/api/posts`, {
     method: "POST",
     body: JSON.stringify({

@@ -15,10 +15,10 @@
 // function touringSkatesHandler() {
 //     document.getElementById('mySkates').innerHTML = "Touring skates"
 
-function selectedSkates (skate) {
-    // event.preventDefault();
+// function selectedSkates (skate) {
+//     // event.preventDefault();
 
-    alert(skate);
-    // document.getElementById('my_skates').innerHTML = "Figure skates"
-    console.log("Figure skates")
-}
+//     alert(skate);
+//     // document.getElementById('my_skates').innerHTML = "Figure skates"
+//     // console.log("Figure skates")
+// }
