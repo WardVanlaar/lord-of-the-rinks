@@ -189,6 +189,7 @@ main {
   font-size: 90%;
   margin-bottom: 0.5%;
   opacity: 0.6;
+  color: orange;
 }
 
 input#post-title {
