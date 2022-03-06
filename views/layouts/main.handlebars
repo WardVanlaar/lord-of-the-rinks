@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lord of the Rinks</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
 <body>
@@ -33,5 +35,24 @@
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
+ <footer class="footer rows pb-2">
+        <div class="row-is-full content has-text-centered">
+            <p>
+            <a href="/">Home</a>{{#if loggedIn}} | 
+            <a href="/dashboard/">dashboard</a> | 
+            <a href="/dashboard/create/">create new post</a>
+            {{else}}
+             | <a href="/login/">Login/Signup</a>
+            {{/if}}
+            </p>
+        </div>
+      <div class="row-is-full content has-text-centered">
+    <p>
+      <strong>Lord of the Rinks</strong> by <a href="https://github.com/WardVanlaar/lord-of-the-rinks">Shareef/Ward/Dalia/Nathan</a> source code: 
+      <a href="https://github.com/WardVanlaar/lord-of-the-rinks"><i class="fab fa-github"></i></a> 
+       <a href="mailto:lordoftherinks@gmail.com"><i class="far fa-envelope"></i></a>
+    </p>
+  </div>
+    </footer>
 
 </html>
