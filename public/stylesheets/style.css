@@ -110,10 +110,12 @@ img {
 
 
 body, html {
+  text-align: center;
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #333;
   background-image: url('../images/rideau-canal.jpg');
   background-size: cover;
@@ -123,9 +125,9 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #2a536e;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
   margin-right: 15px;
 }
 
@@ -139,7 +141,7 @@ button {
   padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -151,8 +153,8 @@ button:hover {
 .title {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
-  background-color: #ccc;
+  padding: 10px;
+  background-color: rgb(144, 152, 185);
 }
 
 h2 {
@@ -170,13 +172,15 @@ h2 {
   list-style-type: none;
 } */
 
-textarea, input {
-  padding: .5%;
+textarea,
+input {
+  padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border: 1px solid #3486eb;
 }
@@ -206,10 +210,10 @@ form label {
 header {
   border-bottom: 1px solid #ccc;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   padding: 20px;
-  background-color: #97b0ce
+  background-color: rgb(144, 152, 185);
 }
 
 main {
@@ -226,7 +230,7 @@ main {
   color: #225ca3;
   font-size: 100%;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
 }
 
 .btn-no-style:hover {
@@ -265,7 +269,7 @@ main {
   padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
   /* background: none;
@@ -289,13 +293,13 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: rgb(186, 202, 211);
 }
 
 .comment .meta {
   font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
 }
 
 input#post-title {
@@ -304,7 +308,7 @@ input#post-title {
 
 textarea#post-text {
   width: 800px;
-  height: 150px
+  height: 150px;
 }
 
 .edit-post-form input {
@@ -313,12 +317,12 @@ textarea#post-text {
 
 .edit-post-form textarea {
   width: 800px;
-  height: 150px
+  height: 150px;
 }
 
 .comment-form textarea {
   width: 800px;
-  height: 150px
+  height: 150px;
 }
 
 .edit-post-form {
@@ -328,6 +332,7 @@ textarea#post-text {
 div.meta {
   display: flex;
   justify-content: space-between;
+  color: rgb(165, 111, 12);
 }
 
 #skates_type {
