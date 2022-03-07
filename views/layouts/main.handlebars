@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="background">
+    <div class="wrapper">
     <header>
       <nav>
         {{#if loggedIn}}
@@ -26,14 +27,23 @@
       </nav>
     </header>
     <main>
-      <h2>Lord of the Rinks</h2>
+      <div class="animate">
+        <ul class="list"> 
+          <li class="list-item">
+            <span class="split-text" data-text="Lord of the Rinks">Lord of the Rinks</span>
+          </li>
+        </ul>
+      </div>
       {{{ body }}}
     </main>
-  </div>
+    </div>
   
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
+
+  {{!-- <img src="rideau-canal.jpg" alt="Background"> --}}
+  </div>
 </body>
  <footer class="footer rows pb-2">
         <div class="row-is-full content has-text-centered">
