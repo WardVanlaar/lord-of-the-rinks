@@ -2,8 +2,114 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+:root {
+  --background: linear-gradient(45deg, #070346, #125c7e);
+  --text-color: #2cc6ec;
+}
+
+ /* .background {
+  display: inline-block;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}  */
+
+
+.list {
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  list-style: none;
+}
+
+.list-item {
+  position: relative;
+  font-weight: bold;
+  font-size: 50px;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.list-item > .split-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  transition: color 0ms 200ms;
+}
+
+.list-item:hover > .split-text {
+  color: transparent;
+  user-select: none;
+  transition-delay: 0ms;
+}
+
+.list-item > .split-text::before,
+.list-item > .split-text::after {
+  position: absolute;
+  content: attr(data-text);
+  height: calc(.5em);
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  color: var(--text-color);
+  transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+  user-select: none;
+}
+
+.list-item:hover > .split-text::before,
+.list-item:hover > .split-text::after {
+  color: white;
+  transform: skewX(15deg);
+}
+
+.list-item > .split-text::after {
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.list-item::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  top: calc(50% - 1px);
+  height: 2px;
+  transform: scale(0);
+  background-color: var(--text-color);
+  border-radius: 20px;
+  z-index: 1;
+  transition: transform 200ms ease-in-out;
+}
+
+.list-item:hover::before {
+  transform: scale(1);
+}
+
+
+.animate {
+  margin: 0;
+  padding-bottom: 10px;
+  background: var(--background);
+  color: var(--text-color);
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+
+
+body, html {
   text-align: center;
   height: 100%;
   padding: 0;
@@ -11,6 +117,10 @@ html {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #333;
+  background-image: url('../images/rideau-canal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
 }
 
 a {
@@ -58,9 +168,9 @@ h2 {
   padding: 0;
 }
 
-ul {
+/* ul {
   list-style-type: none;
-}
+} */
 
 textarea,
 input {
@@ -142,6 +252,7 @@ main {
   line-height: 150%;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background-color: #97b0ce;
 }
 
 .post .title span {
@@ -226,4 +337,14 @@ div.meta {
 
 #skates_type {
   padding: 23px 0px 0px 0px;
+}
+
+.login-form {
+  background-color: #97b0ce;
+  padding: 10px;
+}
+
+.signup-form {
+  background-color: #97b0ce;
+  padding: 10px;
 }
