@@ -7,13 +7,12 @@
   --text-color: #2cc6ec;
 }
 
-/* .background {
-  background-image: url("../images/rideau-canal.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 80%;
-  z-index: 9999;
-} */
+ /* .background {
+  display: inline-block;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}  */
 
 
 .list {
@@ -99,14 +98,28 @@
   justify-content: center;
 }
 
+img {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
-/* body, html {
+
+
+
+body, html {
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
   color: #333;
-} */
+  background-image: url('../images/rideau-canal.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+}
 
 a {
   text-decoration: none;
@@ -235,6 +248,7 @@ main {
   line-height: 150%;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background-color: #97b0ce;
 }
 
 .post .title span {
@@ -318,4 +332,14 @@ div.meta {
 
 #skates_type {
   padding: 23px 0px 0px 0px;
+}
+
+.login-form {
+  background-color: #97b0ce;
+  padding: 10px;
+}
+
+.signup-form {
+  background-color: #97b0ce;
+  padding: 10px;
 }
