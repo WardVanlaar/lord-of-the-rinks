@@ -2,7 +2,6 @@ const Vote = require('./Vote');
 const User = require("./User");
 const Post = require("./Post");
 const Comment = require("./Comment");
-// const Skates = require('./Skates');
 
 User.hasMany(Post, {
   foreignKey: "user_id",
@@ -67,15 +66,5 @@ Post.hasMany(Comment, {
   foreignKey: 'post_id',
   onDelete: "CASCADE"
 });
-
-// Skates.hasMany(Post, {
-//   foreignKey: 'skates_id',
-//   onDelete: 'CASCADE'
-// });
-
-// Post.belongsTo(Skates, {
-//   foreignKey: 'skates_id',
-//   onDelete: 'CASCADE'
-// })
 
 module.exports = { User, Post, Vote, Comment };
