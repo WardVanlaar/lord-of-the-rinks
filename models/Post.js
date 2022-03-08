@@ -51,10 +51,6 @@ Post.init(
     skates_type: {
       type: DataTypes.STRING,
       allowNull: true,
-      // references: {
-      //   model: "skates",
-      //   key: "id",
-      // },
     },
     user_id: {
       type: DataTypes.INTEGER,

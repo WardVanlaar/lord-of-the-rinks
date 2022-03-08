@@ -4,7 +4,7 @@ const postData = [
   {
     title: 'Awesome skates',
     post_text: 'I rented race skates at the Rideau Canal in Ottawa and they were amazing!',
-    skates_typ: "Race skates",
+    skates_type: "Race skates",
     user_id: 1,
   },
   {

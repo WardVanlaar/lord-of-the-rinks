@@ -21,8 +21,7 @@ async function newFormHandler(event) {
     const post_text = document.querySelector(
       'textarea[name="post-text"]'
     ).value;
-    // const my_skates = document.querySelector('input[name="skatesType"]').value;
-
+   
     const response = await fetch(`/api/posts`, {
       method: "POST",
       body: JSON.stringify({
