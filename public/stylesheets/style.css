@@ -3,7 +3,7 @@
 }
 
 @font-face {
-  font-family: 'Hobbit';
+  font-family: "Hobbit";
   src: url(https://www.fontspace.com/half-elven-font-f32870);
 }
 
@@ -114,7 +114,8 @@ nav {
   font-size: 25px;
 }
 
-body, html {
+body,
+html {
   text-align: center;
   height: 100%;
   padding: 0;
@@ -389,4 +390,9 @@ div.title {
   bottom: 0;
   width: 100%;
   height: 2rem; /* Footer height */
+}
+
+.post-list ::marker {
+  content: "⛸️";
+  font-size: 2em;
 }
