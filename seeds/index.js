@@ -1,7 +1,10 @@
 const seedUsers = require('./user-seeds');
 const seedPosts = require('./post-seeds');
 const seedComments = require('./comment-seeds');
+<<<<<<< HEAD
 // const seedSkates = require('./skates-seeds');
+=======
+>>>>>>> origin
 const seedVotes = require('./vote-seeds');
 
 const sequelize = require('../config/connection');

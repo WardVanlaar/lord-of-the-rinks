@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+=======
+@font-face {
+  font-family: "Hobbit";
+  src: url(https://www.fontspace.com/half-elven-font-f32870);
+}
+
+>>>>>>> origin
 :root {
   --background: linear-gradient(45deg, #070346, #125c7e);
   --text-color: #2cc6ec;
@@ -19,6 +27,10 @@
   padding: 0;
   padding-top: 25px;
   list-style: none;
+<<<<<<< HEAD
+=======
+  font-family: "Hobbit";
+>>>>>>> origin
 }
 
 .list-item {
@@ -104,6 +116,13 @@ img {
   z-index: -1;
 }
 
+<<<<<<< HEAD
+=======
+nav {
+  font-size: 25px;
+}
+
+>>>>>>> origin
 body,
 html {
   text-align: center;
@@ -117,6 +136,15 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color;
+<<<<<<< HEAD
+=======
+  overflow: scroll;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+>>>>>>> origin
 }
 
 a {
@@ -157,6 +185,25 @@ h2 {
   background-color: #abb3b8;
   padding: 20px 15px 20px 15px;
   margin: 0;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+#skates_type1 #skates_type2 #skates_type3 {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+#skates_type2 {
+  padding: 18px 0px 0px 0px;
 }
 
 .post-list {
@@ -248,7 +295,11 @@ main {
   line-height: 150%;
   border-radius: 5px;
   border: 1px solid #ccc;
+<<<<<<< HEAD
   background-color: #97b0ce;
+=======
+  background-color: #f1f1f1;
+>>>>>>> origin
 }
 
 .post .title span {
@@ -258,8 +309,6 @@ main {
 }
 
 .edit-link {
-  /* display: block; */
-  /* margin: 5px; */
   background-color: #225ca3;
   border: 0;
   padding: 1%;
@@ -268,15 +317,6 @@ main {
   transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
-  /* background: none;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
-  font-weight: bold;
-  transition: color .1s; */
 }
 
 .comment-form {
@@ -286,6 +326,7 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
+  background-color: rgb(144, 152, 185);
 }
 
 .comment:nth-child(odd) {
@@ -341,11 +382,52 @@ div.meta {
   width: 100%;
 }
 .login-form {
+<<<<<<< HEAD
   background-color: #97b0ce;
+=======
+  background-color: #f1f1f1;
+>>>>>>> origin
   padding: 10px;
 }
 
 .signup-form {
+<<<<<<< HEAD
   background-color: #97b0ce;
   padding: 10px;
 }
+=======
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+div.title {
+  font-size: 28px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 8%;
+}
+
+#content-wrap {
+  padding-bottom: 2rem; /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem; /* Footer height */
+}
+
+.post-list ::marker {
+  content: "⛸️";
+  font-size: 2em;
+}
+
+.editSkateButtons{
+  display: flex;
+  justify-content: space-between;
+}
+>>>>>>> origin
