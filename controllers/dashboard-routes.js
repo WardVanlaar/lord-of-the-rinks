@@ -5,8 +5,8 @@ const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
-  console.log(req.session);
-  console.log('======================');
+  // console.log(req.session);
+  // console.log('======================');
   Post.findAll({
     where: {
       user_id: req.session.user_id
@@ -15,6 +15,7 @@ router.get('/', withAuth, (req, res) => {
       'id',
       'post_text',
       'title',
+      'skates_type',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
@@ -30,7 +31,11 @@ router.get('/', withAuth, (req, res) => {
       {
         model: User,
         attributes: ['username']
-      }
+      },
+      // {
+      //   model: Skates,
+      //   attributes: ['skates_type']
+      // }
     ]
   })
     .then(dbPostData => {
@@ -38,7 +43,7 @@ router.get('/', withAuth, (req, res) => {
       res.render('dashboard', { posts, loggedIn: true });
     })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(500).json(err);
     });
 });
@@ -49,6 +54,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
       'id',
       'post_text',
       'title',
+      'skates_type',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
