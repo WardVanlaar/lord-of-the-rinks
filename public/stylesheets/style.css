@@ -127,7 +127,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color;
-  overflow: scroll;
+  overflow: auto;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
