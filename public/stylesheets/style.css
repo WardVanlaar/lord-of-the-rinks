@@ -7,13 +7,12 @@
   --text-color: #2cc6ec;
 }
 
- /* .background {
+/* .background {
   display: inline-block;
   overflow: visible;
   position: relative;
   width: 100%;
 }  */
-
 
 .list {
   margin: 0;
@@ -48,7 +47,7 @@
 .list-item > .split-text::after {
   position: absolute;
   content: attr(data-text);
-  height: calc(.5em);
+  height: calc(0.5em);
   overflow: hidden;
   left: 0;
   right: 0;
@@ -87,7 +86,6 @@
   transform: scale(1);
 }
 
-
 .animate {
   margin: 0;
   padding-bottom: 10px;
@@ -106,10 +104,8 @@ img {
   z-index: -1;
 }
 
-
-
-
-body, html {
+body,
+html {
   text-align: center;
   height: 100%;
   padding: 0;
@@ -117,7 +113,7 @@ body, html {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #333;
-  background-image: url('../images/rideau-canal.jpg');
+  background-image: url("../images/rideau-canal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color;
@@ -339,6 +335,11 @@ div.meta {
   padding: 23px 0px 0px 0px;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .login-form {
   background-color: #97b0ce;
   padding: 10px;
