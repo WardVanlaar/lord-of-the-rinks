@@ -3,10 +3,10 @@
 
   <form class="new-post-form">
     <div>
-      <label for="post-title">Title</label>
+      <label id="skates_type1" for="post-title">Title</label>
       <input type="text" id="post-title" name="post-title" />
       <div>
-        <label id="skates_type">Select the type of skates you used</label>
+        <label id="skates_type2">Select the type of skates you used</label>
         <input type="button" name="Figure skates" value="Figure skates" class="skates">
         <input type="button" name="Hockey skates" value="Hockey skates" class="skates">
         <input type="button" name="Race skates" value="Race skates" class="skates">
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div>
-      <label for="post-text">Description</label>
+      <label id=""skates_type3 for="post-text">Description</label>
       <textarea type="text" id="post-text" name="post-text"></textarea>
     </div>
     <button id="createPost" class="btn">Create</button>
@@ -30,14 +30,14 @@
           {{!-- {{> post-info post}} --}}
           <article class="post">
             <div class="title">
-              <h3>{{title}}</h3>
-              <p>{{skates_type}}</p>
+              <h4>{{title}}</h4>
               <h5>(Posted by
                 {{user.username}}
                 on
                 {{format_date created_at}})</h5>
             </div>
             <div>
+              <p>Skates I rented: {{skates_type}}</p>
               <p>{{post_text}}</p>
             </div>
             <div class="meta">
@@ -51,10 +51,9 @@
         </li>
       {{/each}}
     </ol>
-<img src="rideau-canal.jpg" alt="Background" style="background-size:cover;background-attachment:fixed;backgroud-position:80%;z-index:9999;">
+{{!-- <img src="rideau-canal.jpg" alt="Background" style="background-size:cover;background-attachment:fixed;backgroud-position:80%;z-index:9999;"> --}}
   
   </section>
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
-{{!-- <script src="/javascript/select-skates.js"></script> --}}
