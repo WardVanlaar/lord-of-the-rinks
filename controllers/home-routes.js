@@ -4,7 +4,7 @@ const { Post, User, Comment} = require('../models');
 
 // get all posts for homepage
 router.get('/', (req, res) => {
-  console.log('======================');
+  // console.log('======================');
   Post.findAll({
     attributes: [
         'id',
@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
       });
     })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(500).json(err);
     });
 });
@@ -86,7 +86,7 @@ router.get('/post/:id', (req, res) => {
       });
     })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
       res.status(500).json(err);
     });
 });

@@ -7,19 +7,17 @@
       <input type="text" id="post-title" name="post-title" />
       <div>
         <label id="skates_type">Select the type of skates you used</label>
-        <button id="figure" class="skates" onclick="figureSkatesHandler()">Figure Skates</button>
-        <button id="hockey" onclick="hockeySkatesHandler()">Hockey Skates</button>
-        <button id="racing" onclick="racingSkatesHandler()">Racing Skates</button>
-        <button id="touring" onclick="touringSkatesHandler()">Touring Skates</button>
+        <input type="button" name="Figure skates" value="Figure skates" class="skates">
+        <input type="button" name="Hockey skates" value="Hockey skates" class="skates">
+        <input type="button" name="Race skates" value="Race skates" class="skates">
+        <input type="button" name="Touring skates" value="Touring skates" class="skates">
       </div>
-
     </div>
     <div>
       <label for="post-text">Description</label>
       <textarea type="text" id="post-text" name="post-text"></textarea>
-      {{! <input type="text" id="post-text" name="post-text" /> }}
     </div>
-    <button id="createPost" type="submit" class="btn">Create</button>
+    <button id="createPost" class="btn">Create</button>
   </form>
 </section>
 
@@ -33,7 +31,7 @@
           <article class="post">
             <div class="title">
               <h3>{{title}}</h3>
-              <p id="mySkates"></p>
+              <p>{{skates_type}}</p>
               <h5>(Posted by
                 {{user.username}}
                 on
@@ -59,3 +57,4 @@
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
+{{!-- <script src="/javascript/select-skates.js"></script> --}}
