@@ -181,6 +181,10 @@ h3 {
   padding: 10px;
 }
 
+h5 {
+  font-size: 25px;
+}
+
 #skates_type1 #skates_type2 #skates_type3 {
   font-size: 18px;
   font-weight: bolder;
