@@ -2,10 +2,10 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 
 const app = express();
-app.use(morgan('combined'));
+// app.use(morgan('combined'));
 const PORT = process.env.PORT || 3001;
 
 const sequelize = require("./config/connection");
