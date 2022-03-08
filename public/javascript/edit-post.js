@@ -1,3 +1,16 @@
+let mySkates = "";
+console.log(mySkates.length);
+
+document.body.addEventListener("click", function (event) {
+  if (event.target.matches(".skates")) {
+    var skateName = event.target.getAttribute("name");
+    console.log(skateName);
+    mySkates = skateName;
+    console.log(mySkates);
+    console.log(mySkates.length);
+  }
+});
+
 async function editFormHandler(event) {
     event.preventDefault();
   
@@ -10,7 +23,8 @@ async function editFormHandler(event) {
       method: 'PUT',
       body: JSON.stringify({
         title,
-        post_text
+        post_text,
+        mySkates,
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -24,4 +38,4 @@ async function editFormHandler(event) {
     }
   }
   
-  document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
+  document.querySelector('.new-post-form').addEventListener('submit', editFormHandler);

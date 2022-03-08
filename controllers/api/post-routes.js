@@ -60,6 +60,7 @@ router.get("/:id", (req, res) => {
       "title",
       "post_text",
       "user_id",
+      "skates_type",
       "created_at",
       [
         sequelize.literal(
@@ -129,6 +130,7 @@ router.put("/:id", withAuth, (req, res) => {
     {
       title: req.body.title,
       post_text: req.body.post_text,
+      skates_type: req.body.mySkates,
     },
     {
       where: {
