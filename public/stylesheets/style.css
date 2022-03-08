@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Hobbit';
+  src: url(https://www.fontspace.com/half-elven-font-f32870);
+}
+
 :root {
   --background: linear-gradient(45deg, #070346, #125c7e);
   --text-color: #2cc6ec;
@@ -19,6 +24,7 @@
   padding: 0;
   padding-top: 25px;
   list-style: none;
+  font-family: "Hobbit";
 }
 
 .list-item {
@@ -104,8 +110,11 @@ img {
   z-index: -1;
 }
 
-body,
-html {
+nav {
+  font-size: 25px;
+}
+
+body, html {
   text-align: center;
   height: 100%;
   padding: 0;
@@ -117,15 +126,12 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color;
+  overflow: scroll;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-nav {
-  font-size: 18px;
 }
 
 a {
@@ -169,7 +175,7 @@ h2 {
 }
 
 h3 {
-  font-weight:bold;
+  font-weight: bold;
   font-size: 25px;
   padding: 10px;
 }
@@ -272,7 +278,7 @@ main {
   line-height: 150%;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #97b0ce;
+  background-color: #f1f1f1;
 }
 
 .post .title span {
@@ -299,7 +305,7 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
-  background-color:rgb(144, 152, 185)
+  background-color: rgb(144, 152, 185);
 }
 
 .comment:nth-child(odd) {
@@ -355,12 +361,12 @@ div.meta {
   width: 100%;
 }
 .login-form {
-  background-color: #97b0ce;
+  background-color: #f1f1f1;
   padding: 10px;
 }
 
 .signup-form {
-  background-color: #97b0ce;
+  background-color: #ffffff;
   padding: 10px;
 }
 
@@ -371,16 +377,16 @@ div.title {
 #page-container {
   position: relative;
   min-height: 100vh;
-  padding-bottom: 6%;
+  padding-bottom: 8%;
 }
 
 #content-wrap {
-  padding-bottom: 2rem;    /* Footer height */
+  padding-bottom: 2rem; /* Footer height */
 }
 
 #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2rem;            /* Footer height */
+  height: 2rem; /* Footer height */
 }
