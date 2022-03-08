@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Hobbit';
+  src: url(https://www.fontspace.com/half-elven-font-f32870);
+}
+
 :root {
   --background: linear-gradient(45deg, #070346, #125c7e);
   --text-color: #2cc6ec;
@@ -19,6 +24,7 @@
   padding: 0;
   padding-top: 25px;
   list-style: none;
+  font-family: "Hobbit";
 }
 
 .list-item {
@@ -104,8 +110,11 @@ img {
   z-index: -1;
 }
 
-body,
-html {
+nav {
+  font-size: 25px;
+}
+
+body, html {
   text-align: center;
   height: 100%;
   padding: 0;
@@ -117,15 +126,12 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color;
+  overflow: scroll;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-nav {
-  font-size: 18px;
 }
 
 a {
@@ -360,7 +366,7 @@ div.meta {
 }
 
 .signup-form {
-  background-color: #97b0ce;
+  background-color: #ffffff;
   padding: 10px;
 }
 
