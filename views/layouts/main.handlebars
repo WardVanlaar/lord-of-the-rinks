@@ -18,41 +18,40 @@
   <body>
     <div id="page-container">
       <div id="content-wrap">
-    <div class="background">
-      <div class="wrapper">
-        <header>
-          <nav>
-            {{#if loggedIn}}
-              <a href="/">Home</a>
-              <a href="/dashboard">Dashboard</a>
-              <button id="logout" class="btn-no-style">Logout</button>
-            {{else}}
-              <a href="/">Home</a>
-              <a href="/dashboard">Dashboard</a>
-              <a href="/login">Login/Sign-up</a>
-            {{/if}}
-          </nav>
-        </header>
-        <main>
-          <div class="animate">
-            <ul class="list">
-              <li class="list-item">
-                <span class="split-text" data-text="Lord of the Rinks">Lord of
-                  the Rinks</span>
-              </li>
-            </ul>
-          </div>
-          {{{body}}}
-        </main>
+        {{!-- <div class="background"> --}}
+        <div class="wrapper">
+          <header>
+            <nav>
+              {{#if loggedIn}}
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <button id="logout" class="btn-no-style">Logout</button>
+              {{else}}
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/login">Login/Sign-up</a>
+              {{/if}}
+            </nav>
+          </header>
+          <main>
+            <div class="animate">
+              <ul class="list">
+                <li class="list-item">
+                  <span class="split-text" data-text="Lord of the Rinks">Lord of
+                    the Rinks</span>
+                </li>
+              </ul>
+            </div>
+            {{{body}}}
+          </main>
+        </div>
+
+        {{#if loggedIn}}
+          <script src="/javascript/logout.js"></script>
+        {{/if}}
       </div>
 
-      {{#if loggedIn}}
-        <script src="/javascript/logout.js"></script>
-      {{/if}}
-    </div>
-    </div>
-
-     <footer class="footer rows pb-2">
+      <footer class="footer rows pb-2">
         <div class="row-is-full content has-text-centered">
             <p>
             <a href="/">Home</a>{{#if loggedIn}} | 
@@ -67,7 +66,7 @@
           <a href="https://github.com/WardVanlaar/lord-of-the-rinks"><i class="fab fa-github"></i></a> 
           <a href="mailto:lordoftherinks@gmail.com"><i class="far fa-envelope"></i></a>
         </p>
-    </footer>
+      </footer>
     </div>
   </body>
 </html>
