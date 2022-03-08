@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="background">
+    <div class="wrapper">
     <header>
       <nav>
         {{#if loggedIn}}
@@ -26,14 +27,23 @@
       </nav>
     </header>
     <main>
-      <h2>Lord of the Rinks</h2>
+      <div class="animate">
+        <ul class="list"> 
+          <li class="list-item">
+            <span class="split-text" data-text="Lord of the Rinks">Lord of the Rinks</span>
+          </li>
+        </ul>
+      </div>
       {{{ body }}}
     </main>
-  </div>
+    </div>
   
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
+
+  {{!-- <img src="rideau-canal.jpg" alt="Background"> --}}
+  </div>
 </body>
  <footer class="footer rows pb-2">
         <div class="row-is-full content has-text-centered">
@@ -48,7 +58,7 @@
         </div>
       <div class="row-is-full content has-text-centered">
     <p>
-      <strong>Lord of the Rinks</strong> by <a href="https://github.com/WardVanlaar/lord-of-the-rinks">Shareef/Ward/Dalia/Nathan</a> source code: 
+      <strong>Lord of the Rinks</strong> by <a href="https://github.com/sabrtraveler">Shareef<a href="https://github.com/WardVanlaar/">Ward<a href="https://github.com/daliamfarag/">Dalia<a href="https://github.com/nathan1133/">Nathan</a> Contact Us: 
       <a href="https://github.com/WardVanlaar/lord-of-the-rinks"><i class="fab fa-github"></i></a> 
        <a href="mailto:lordoftherinks@gmail.com"><i class="far fa-envelope"></i></a>
     </p>
