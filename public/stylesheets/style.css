@@ -338,6 +338,7 @@ div.meta {
 .footer {
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 .login-form {
   background-color: #97b0ce;
