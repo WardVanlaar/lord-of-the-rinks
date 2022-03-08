@@ -1,69 +1,46 @@
+let mySkates = "";
+console.log(mySkates.length);
 
-// const skateArray = [];
-
-// function figureSkatesHandler(event) {
-//   event.preventDefault();
-//   document.getElementById("mySkates").innerHTML = "Figure skates";
-//   skateArray.push("Figure skates");
-//   console.log(skateArray)
-// } 
-
-// function hockeySkatesHandler() {
-//   console.log("hockey");
-//   document.getElementById("mySkates").innerHTML = "Hockey skates";
-//   skateArray.push("Hockey skates");
-// } 
-
-// function raceSkatesHandler() {
-//   console.log("race");
-//   document.getElementById("mySkates").innerHTML = "Race skates";
-//   skateArray.push("Race skates");
-// } 
-
-// function touringSkatesHandler() {
-//   console.log("tour");
-//   document.getElementById("mySkates").innerHTML = "Touring skates";
-//   skateArray.push("Touring skates");
-// }
-// var my_skates = ""
-
-
-// function selectedSkates (skate) {
-//   alert(skate);
-//   document.getElementById('mySkates').innerHTML = "Figure skates"
-
-// }
+document.body.addEventListener("click", function (event) {
+  if (event.target.matches(".skates")) {
+    var skateName = event.target.getAttribute("name");
+    console.log(skateName);
+    mySkates = skateName;
+    console.log(mySkates);
+    console.log(mySkates.length);
+  }
+});
 
 async function newFormHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="post-title"]').value;
-  const post_text = document.querySelector('textarea[name="post-text"]').value;
-  const my_skates = document.querySelector('input[name="skatesType"]').value;
-  alert(title)
-  alert(post_text)
-  alert(my_skates)
-  console.log(my_skates)
- 
-  const response = await fetch(`/api/posts`, {
-    method: "POST",
-    body: JSON.stringify({
-      title,
-      post_text,
-      my_skates,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  if (response.ok) {
-    document.location.replace("/dashboard");
+  if (mySkates.length <= 0) {
+    alert("Please chose a skate");
   } else {
-    alert(response.statusText);
+    const title = document.querySelector('input[name="post-title"]').value;
+    const post_text = document.querySelector(
+      'textarea[name="post-text"]'
+    ).value;
+    // const my_skates = document.querySelector('input[name="skatesType"]').value;
+
+    const response = await fetch(`/api/posts`, {
+      method: "POST",
+      body: JSON.stringify({
+        title,
+        post_text,
+        mySkates,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace("/dashboard");
+    } else {
+      alert(response.statusText);
+    }
   }
 }
 
-document
-  .querySelector("#createPost")
-  .addEventListener("click", newFormHandler);
+document.querySelector("#createPost").addEventListener("click", newFormHandler);

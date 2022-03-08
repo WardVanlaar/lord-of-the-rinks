@@ -6,22 +6,19 @@
       <label for="post-title">Title</label>
       <input type="text" id="post-title" name="post-title" />
       <div>
-        <label id="skates_type">Select the type of skates you used</label>
-        <input type="button" value="Figure skates" id="figure" class="my_skates" name="skatesType">
-        
-        {{!-- <button id="figure" class="skates" onclick="selectedSkates('figure')">Figure Skates</button>
-        <button id="hockey" onclick="selectedSkates('hockey')">Hockey Skates</button>
-        <button id="racing" onclick="selectedSkates('racing')">Racing Skates</button>
-        <button id="touring" onclick="selectedSkates('touring')">Touring Skates</button> --}}
+        <label id="skates_type">Select the type of skates you used></label>
+        <input type="button" name="figure" value="Figure skates" class="skates">
+        <input type="button" name="hockey" value="Hockey skates" class="skates">
+        <input type="button" name="race" value="Race skates" class="skates">
+        <input type="button" name="touring" value="Touring skates" class="skates">
       </div>
 
     </div>
     <div>
       <label for="post-text">Description</label>
       <textarea type="text" id="post-text" name="post-text"></textarea>
-      {{! <input type="text" id="post-text" name="post-text" /> }}
     </div>
-    <button id="createPost" type="submit" class="btn">Create</button>
+    <button id="createPost" class="btn">Create</button>
   </form>
 </section>
 
