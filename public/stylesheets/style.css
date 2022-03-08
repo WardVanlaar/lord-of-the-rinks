@@ -227,3 +227,8 @@ div.meta {
 #skates_type {
   padding: 23px 0px 0px 0px;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
