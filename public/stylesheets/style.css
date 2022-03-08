@@ -396,3 +396,8 @@ div.title {
   content: "⛸️";
   font-size: 2em;
 }
+
+.editSkateButtons{
+  display: flex;
+  justify-content: space-between;
+}
