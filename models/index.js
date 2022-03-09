@@ -2,10 +2,6 @@ const Vote = require('./Vote');
 const User = require("./User");
 const Post = require("./Post");
 const Comment = require("./Comment");
-<<<<<<< HEAD
-// const Skates = require('./Skates');
-=======
->>>>>>> origin
 
 User.hasMany(Post, {
   foreignKey: "user_id",
@@ -71,17 +67,4 @@ Post.hasMany(Comment, {
   onDelete: "CASCADE"
 });
 
-<<<<<<< HEAD
-// Skates.hasMany(Post, {
-//   foreignKey: 'skates_id',
-//   onDelete: 'CASCADE'
-// });
-
-// Post.belongsTo(Skates, {
-//   foreignKey: 'skates_id',
-//   onDelete: 'CASCADE'
-// })
-
-=======
->>>>>>> origin
 module.exports = { User, Post, Vote, Comment };

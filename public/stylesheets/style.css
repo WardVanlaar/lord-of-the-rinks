@@ -2,14 +2,11 @@
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-=======
 @font-face {
   font-family: "Hobbit";
   src: url(https://www.fontspace.com/half-elven-font-f32870);
 }
 
->>>>>>> origin
 :root {
   --background: linear-gradient(45deg, #070346, #125c7e);
   --text-color: #2cc6ec;
@@ -27,10 +24,7 @@
   padding: 0;
   padding-top: 25px;
   list-style: none;
-<<<<<<< HEAD
-=======
   font-family: "Hobbit";
->>>>>>> origin
 }
 
 .list-item {
@@ -116,13 +110,10 @@ img {
   z-index: -1;
 }
 
-<<<<<<< HEAD
-=======
 nav {
   font-size: 25px;
 }
 
->>>>>>> origin
 body,
 html {
   text-align: center;
@@ -136,15 +127,12 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: color;
-<<<<<<< HEAD
-=======
   overflow: scroll;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
->>>>>>> origin
 }
 
 a {
@@ -295,11 +283,7 @@ main {
   line-height: 150%;
   border-radius: 5px;
   border: 1px solid #ccc;
-<<<<<<< HEAD
-  background-color: #97b0ce;
-=======
   background-color: #f1f1f1;
->>>>>>> origin
 }
 
 .post .title span {
@@ -382,20 +366,11 @@ div.meta {
   width: 100%;
 }
 .login-form {
-<<<<<<< HEAD
-  background-color: #97b0ce;
-=======
   background-color: #f1f1f1;
->>>>>>> origin
   padding: 10px;
 }
 
 .signup-form {
-<<<<<<< HEAD
-  background-color: #97b0ce;
-  padding: 10px;
-}
-=======
   background-color: #ffffff;
   padding: 10px;
 }
@@ -430,4 +405,3 @@ div.title {
   display: flex;
   justify-content: space-between;
 }
->>>>>>> origin

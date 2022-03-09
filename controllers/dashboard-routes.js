@@ -32,13 +32,6 @@ router.get('/', withAuth, (req, res) => {
         model: User,
         attributes: ['username']
       },
-<<<<<<< HEAD
-      // {
-      //   model: Skates,
-      //   attributes: ['skates_type']
-      // }
-=======
->>>>>>> origin
     ]
   })
     .then(dbPostData => {
