@@ -21,12 +21,15 @@ Programming languages used:
 * Node.js
 * MySQL
 
+This is what it looks like:
+
+![image](https://user-images.githubusercontent.com/91222837/157670375-23095ab1-f595-4f7c-8587-371ef0ba954d.png)
 
 ## Installation
 Clone this repo, install MySQL, type npm install in the terminal. Then create an .ENV file in the root of the project and define DB_USER (your MySQL username), DB_PW (your MySQL password) and DB_NAME ('lord-of-the-rinks'). Open the database and seed it (in the terminal, type npm run seed), then type npm start in the terminal.
 
 ## Usage
-This App can be used by a community of skaters who want to share their experiences on the ice of the Ottawa Rideau Canal.
+This App can be used by a community of skaters who want to share their experiences on the ice of the Ottawa Rideau Canal. Click this link to check out our App: https://lord-of-the-rinks.herokuapp.com/
 
 ## License
 This App is covered under the following license: MIT
